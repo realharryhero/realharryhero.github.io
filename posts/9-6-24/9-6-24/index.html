@@ -8,11 +8,11 @@
   <link rel="stylesheet" href="/css/franklin.css">
   <link rel="stylesheet" href="/css/basic.css">
   <link rel="icon" href="/assets/favicon.png">
-   <title></title>  
+   <title>L1 XTuner Homework for LLM Practical Camp Course &#40;InternLM-1.8b&#41;</title>  
 </head>
 <body>
   <header>
-<div class="blog-name"><a href="">Basic Template</a></div>
+<div class="blog-name"><a href="">Harry's Website</a></div>
 <nav>
   <ul>
     <li><a href="/">Home</a></li>
@@ -24,9 +24,119 @@
 
 
 <!-- Content appended here -->
-<div class="franklin-content"><div class="page-foot">
+<div class="franklin-content"><h1 id="l1_xtuner_homework_for_llm_practical_camp_course_internlm-18b"><a href="#l1_xtuner_homework_for_llm_practical_camp_course_internlm-18b" class="header-anchor">L1 XTuner Homework for LLM Practical Camp Course &#40;InternLM-1.8b&#41;</a></h1>
+<p>I re-used the &quot;demo&quot; conda environment from the Demo homework &#40;that I did on 8-28-24&#41; again as I didn&#39;t want to wait so long installing packages &#40;specifically torch&#41;.</p>
+<p>I liked this assignment quite a bit&#33; It&#39;s a great introduction to XTuner, and the time when it started training was so coooooool. It seems XTuner&#39;s 10&#37; faster or so than LLaMA-Factory, and avoids Out-Of-Memory errors, so I think it&#39;s a pretty good learning experience&#33; </p>
+<p>&#40;There&#39;s a footnote at the end of the post for why I don&#39;t have so much screenshots from Chapters 2.1-2.4.&#41;</p>
+<p>I cloned the directory, and I used the same environment, demo, instead of making a new one. Then I installed xtuner with deepspeed in the demo environment; I then interrupted the installation because, indeed, I needed to install xtuner with deepspeed from a mirror to speed up the installation according to the instructions:</p>
+
+    <img src="../ch2.3-1.png"  class="main-picture" >
+    <p>
+    <p>
+
+<p>Then I installed tree, and checked the directory structure - it matched.</p>
+<p>From there, I ran the streamlit app. Due to my usage of the previous demo environment, I recieved an error regarding some &#39;<em>eos</em>token_tensor&#39;; I downgraded transformers to 4.40.2 according to <a href="https://github.com/THUDM/ChatGLM3/issues/1299">this post</a> and then it worked.</p>
+
+    <img src="../ch3.1-1.png"  class="main-picture" >
+    <p>
+    <p>
+
+<p>Then I created the script directory and prepared the script with a python program &#40;at this point, I had left and then came back &#40;or maybe was it later or earlier? around this time. or maybe I just wrote &quot;clear&quot; because I failed to write some commands correctly&#41;, so the terminal&#39;s somewhat clear.&#41;</p>
+
+    <img src="../ch3.2.1.png"  class="main-picture" >
+    <p>
+    <p>
+
+<p>I then determined the config file and chose the config file to train the model:</p>
+
+    <img src="../ch3.2.2.png"  class="main-picture" >
+    <p>
+    <p>
+
+<p>Finally, I modified the config file to train the model correctly...</p>
+
+    <img src="../ch3.2.2.3.png"  class="main-picture" >
+    <p>
+    <p>
+
+<p>And to the training&#33; Remember to save enough computing power to train the model &#40;I set it for 1 hour, and it ran out of time first before I trained it again; the screenshots below are for the first training session. The video is a screen recording in a screen recording, to &quot;crop&quot; the original screen recording &#40;it&#39;s the simplest way to do it on my computer&#41;&#41;:</p>
+
+    <img src="../ch3.2.3-1-update.png"  class="main-picture" >
+    <p>
+    <p>
+
+
+    <img src="../ch3.2.3-2.png"  class="main-picture" >
+    <p>
+    <p>
+
+
+    <img src="../ch3.2.3-3.png"  class="main-picture" >
+    <p>
+    <p>
+
+<p>Here&#39;s a video of it:</p>
+
+    <video width="700" controls>
+      <source src="../ch3.2.3-video.mov" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+<p>I came back the next day &#40;apparently apt packages aren&#39;t saved after coming back, so I reinstalled tree quickly&#41;, I found that my directory tree looked correct &#40;the model checkpoints were saved&#41;, converted the model format to the Hugging Face format, and finally merged the trained portion of the model; in fact, training in this way only essentially adds a &quot;pre-trained head&quot; to the model, most likely to save &#40;a lot&#41; of time. Such training is called fine-tuning, and it takes orders of magnitude less resources to train.</p>
+
+    <img src="../ch3.2.4-1.png"  class="main-picture" width="700" >
+    <p>
+    <p>
+
+
+    <img src="../ch3.2.4-2.png"  class="main-picture" width="700" >
+    <p>
+    <p>
+
+
+    <img src="../ch3.2.4-3.png"  class="main-picture" width="700" >
+    <p>
+    <p>
+
+<p>Finally, I set the model up by changing the model path as per the instructions in the script, and then ran the model&#33;</p>
+<p>First, I gave the model questions with fine-tuning, and then I gave the model questions without fine-tuning. Note that there are a lot of cuts &#40;so that you don&#39;t have to wait a few minutes for the streamlit app to load the model, etc etc.&#41;, including between the prompts given to the model as I needed to copy the Chinese questions from another place &#40;I can&#39;t type Chinese&#41;.</p>
+
+    <video width="700" controls>
+      <source src="../ch3.2.5-video.mov" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+
+    <img src="../ch3.2.5-1.png"  class="main-picture" width="700" >
+    <p>
+    <p>
+
+
+    <img src="../ch3.2.5-1-en.png"  class="main-picture" width="700" >
+    <p>
+    <p>
+
+
+    <img src="../ch3.2.5-2.png"  class="main-picture" width="700" >
+    <p>
+    <p>
+
+
+    <img src="../ch3.2.5-2-en.png"  class="main-picture" width="700" >
+    <p>
+    <p>
+
+<p>And that&#39;s all&#33; Thank you for reading this post&#33;</p>
+<p>*Footnote: I&#39;ll note that I don&#39;t have some screenshots from the first half &#40;for some reason, I thought that the assignment was something like showing a prompt that the model couldn&#39;t do without training but could do with training, maybe that&#39;s another assignment&#41;; the first half was easy though, and I do have a recording verifying I installed the package below, shown when I discuss Chapters 2.3. &#40;And probably there&#39;s a command for the grader to use where they can check the history of used shell commands anyway.&#41;</p>
+
+    <video width="700" controls>
+      <source src="../ch2.3-video-nosound.mov" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+
+<div class="page-foot">
   <div class="copyright">
-    &copy; Septimia Zenobia. Last modified: September 06, 2024. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Harry Fan. Last modified: September 08, 2024. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

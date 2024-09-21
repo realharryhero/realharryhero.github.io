@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <link rel="stylesheet" href="/css/franklin.css">
+  <link rel="stylesheet" href="/css/basic.css">
+  <link rel="icon" href="/assets/favicon.png">
+   <title>L1 LlamaIndex Homework for LLM Practical Camp Course &#40;InternLM-1.8b&#41;</title>  
+</head>
+<body>
+  <header>
+<div class="blog-name"><a href="">Harry's Website</a></div>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/menu1/">Blog</a></li>
+  </ul>
+  <img src="/assets/hamburger.svg" id="menu-icon">
+</nav>
+</header>
+
+
+<!-- Content appended here -->
+<div class="franklin-content"><h1 id="l1_llamaindex_homework_for_llm_practical_camp_course_internlm-18b"><a href="#l1_llamaindex_homework_for_llm_practical_camp_course_internlm-18b" class="header-anchor">L1 LlamaIndex Homework for LLM Practical Camp Course &#40;InternLM-1.8b&#41;</a></h1>
+<p>For this assignment, setting it up was straightforward &#40;set up a model to look for documents then infer from there&#41;, and it&#39;s rather simple why this is better than fine-tuning often &#40;much less resources; etc etc&#41;. To anyone who wants to do this, though, make sure you try to get this done as quickly as possible, like when one tries to get the model to do basic math.</p>
+<p>Getting it to say things correctly was actually quite frustrating - the RAG model did not work well, often repeated itself over and over again &#40;saying things about xtuner when I didn&#39;t ask&#41; and it took about an hour cumulatively over a few days &#40;A bit late due to some other things&#41; to get this to finally work. I&#39;d think that for the two assignments where one tries to get the model to do basic math / retrieval, it would be nice to use a 7B model; note that the other assignments were pretty nice, and these two were just the outliers. </p>
+<p>The screenshot of the prompt that didn&#39;t work without RAG but did with RAG, and of where it worked and didn&#39;t work, is below. Note that with RAG, the model successfully finds &#40;probably through the internet&#41; that the xtuner repository is on a GitHub link associated with InternLM &#40;i.e. github.com/InternLM/xtuner&#41;, but without RAG the model fails &#40;it gives the link github.com/xtuner/xtuner&#41;, so that&#39;s nice&#33; </p>
+<p>With RAG:</p>
+
+    <img src="../withrag.png"  class="main-picture" >
+    <p>
+    <p>
+
+<p>Without RAG:</p>
+
+    <img src="../withoutrag.png"  class="main-picture" >
+    <p>
+    <p>
+
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Harry Fan. Last modified: September 21, 2024. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+    
+    
+  </body>
+</html>

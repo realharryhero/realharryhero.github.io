@@ -2,20 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/posts/9-11-24%20L2/9-11-24-2/index.html</loc>
+    <lastmod>2024-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/menu1/index.html</loc>
-    <lastmod>2024-09-07</lastmod>
+    <lastmod>2024-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/index.html</loc>
-    <lastmod>2024-09-08</lastmod>
+    <lastmod>2024-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>https://tlienart.github.io/FranklinTemplates.jl/posts/9-6-24/9-6-24/index.html</loc>
     <lastmod>2024-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/posts/9-10-24/9-10-24/index.html</loc>
+    <lastmod>2024-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>https://tlienart.github.io/FranklinTemplates.jl/posts/9-11-24/9-11-24/index.html</loc>
+    <lastmod>2024-09-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>

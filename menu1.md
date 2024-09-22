@@ -6,4 +6,4 @@
 
 *[9/10/24 - L1 OpenCompass Homework for LLM Practical Camp Course (InternLM-1.8b)](../posts/9-10-24/9-10-24)
 
-*[9/21/24 - L1 LlamaIndex Homework for LLM Practical Camp Course (InternLM-1.8b)](../posts/9-10-24/9-10-24)
+*[9/21/24 - L1 LlamaIndex Homework for LLM Practical Camp Course (InternLM-1.8b)](../posts/9-21-24/9-21-24)
